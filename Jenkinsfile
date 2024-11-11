@@ -1,11 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout1212121') {
+        stage('Checkout') {
             steps {
-                // Checkout mã nguồn từ GitHub
-                git 'https://github.com/MegumiKatou02/Group1Demo.git'
+                git branch: 'main', url: 'https://github.com/MegumiKatou02/Group1Demo.git'
             }
         }
-    } 
+    }
 }
