@@ -61,6 +61,6 @@ public class Program extends JFrame {
 		nameGroup.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		nameGroup.setBounds(108, 23, 242, 28);
 		contentPane.add(nameGroup);
-		// add something 1234
+		// add something 12345656
 	}
 }
