@@ -7,5 +7,5 @@ pipeline {
                 git 'https://github.com/MegumiKatou02/Group1Demo.git'
             }
         }
-        
+    } 
 }
