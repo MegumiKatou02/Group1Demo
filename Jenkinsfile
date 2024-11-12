@@ -37,7 +37,7 @@ pipeline {
                         sh 'docker build -t chinhapp .'
                         
                         // // Đẩy Docker image lên Docker Hub (hoặc registry khác)
-                        sh 'docker push chinhapp'
+                        sh 'docker push chinhapp' 
                     }
                 }
             }
