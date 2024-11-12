@@ -30,6 +30,17 @@ pipeline {
                 archiveArtifacts allowEmptyArchive: false, artifacts: '**/target/*.jar', onlyIfSuccessful: true
             }
         }
+        stage('Deploy to Docker') {
+            steps {
+                script {
+                    echo 'Deploying to Docker...'
+                    // Build Docker image
+                    sh 'docker build -t appswing .'
+                    // Chạy ứng dụng trong container Docker
+                    sh 'docker run -d -p 8080:8080 appswing'
+                }
+            }
+        }
     } 
     post {
         success {
