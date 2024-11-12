@@ -31,11 +31,23 @@ pipeline {
         }
     } 
     post {
+        // success {
+        //     echo 'Thuc hien pineline thanh cong'  
+        // }
+        // failure {
+        //     echo 'Build that bai.' 
+        // }
         success {
-            echo 'Thuc hien pineline thanh cong'  
+            echo 'Pipeline completed successfully!'
+            emailext (
+                to: 'ledinhchinh.dev@gmail.com',  // Thay đổi với địa chỉ email bạn muốn gửi
+                subject: 'Build Success - AppSwing JAR File',
+                body: 'The build was successful. Please find the JAR file attached.',
+                attachmentsPattern: '**/target/*.jar'  // Gửi file JAR sau khi build thành công
+            )
         }
         failure {
-            echo 'Build that bai.' 
+            echo 'Build failed.'
         }
     }
 }
