@@ -52,7 +52,7 @@ public class Program extends JFrame {
 		
 		JLabel l4 = new JLabel("Nguyễn Nhật Linh");
 		l4.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		l4.setBounds(108, 197, 242, 28);
+		l4.setBounds(108, 197, 242, 28); 
 		contentPane.add(l4);
 		
 		JLabel nameGroup = new JLabel("Nhóm 1");
