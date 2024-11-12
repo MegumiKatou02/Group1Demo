@@ -42,7 +42,8 @@ pipeline {
             steps {
                 script {
                     echo 'Running the application...'
-                    sh 'java -jar target/AppSwing-0.0.1-SNAPSHOT.jar'
+                    // sh 'java -jar target/AppSwing-0.0.1-SNAPSHOT.jar'
+                    sh 'java -Djava.awt.headless=true -jar target/AppSwing-0.0.1-SNAPSHOT.jar'
                 }
             }
         }
