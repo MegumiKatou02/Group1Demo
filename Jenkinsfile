@@ -4,6 +4,11 @@ pipeline {
         maven 'MAVEN' 
         dockerTool 'Docker'
     }
+    environment {
+        DOCKER_HUB_CREDENTIALS = 'docker-hub'  
+        IMAGE_NAME = 'chinh'  
+        TAG = 'latest'  
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -22,8 +27,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-hub', toolName: 'Docker') {
-                        sh 'docker build -t chinhapp .'
-                        sh 'docker push chinhapp'  
+                        sh "docker build -t ${DOCKER_HUB_CREDENTIALS}/${IMAGE_NAME}:${TAG} ."
                     }
                 }
             }
