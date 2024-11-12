@@ -12,6 +12,7 @@ public class Program extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private JLabel l1, l2, l3, l4, nameGroup;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -35,30 +36,47 @@ public class Program extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel l1 = new JLabel("Lê Đình sChinh");
+		l1 = new JLabel("Lê Đình Chinh");
 		l1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		l1.setBounds(108, 83, 242, 28);
 		contentPane.add(l1);
 		
-		JLabel l2 = new JLabel("Lê Công Huy");
+		l2 = new JLabel("Lê Công Huy");
 		l2.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		l2.setBounds(108, 121, 242, 28);
 		contentPane.add(l2);
 		
-		JLabel l3 = new JLabel("Nguyễn Duy Vũ");
+		l3 = new JLabel("Nguyễn Duy Vũ");
 		l3.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		l3.setBounds(108, 159, 242, 28);
 		contentPane.add(l3);
 		
-		JLabel l4 = new JLabel("Nguyễn Nhật Linh");
+		l4 = new JLabel("Nguyễn Nhật Linh");
 		l4.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		l4.setBounds(108, 197, 242, 28); 
 		contentPane.add(l4);
 		
-		JLabel nameGroup = new JLabel("Nhóm 1");
+		nameGroup = new JLabel("Nhóm 1");
 		nameGroup.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		nameGroup.setBounds(108, 23, 242, 28);
 		contentPane.add(nameGroup);
-		// add something 12345656
 	}
+	public JLabel getL1() {
+        return l1;
+    }
+
+    public JLabel getL2() {
+        return l2;
+    }
+
+    public JLabel getL3() {
+        return l3;
+    }
+
+    public JLabel getL4() {
+        return l4;
+    }
+	public JLabel getNameGroup() {
+        return nameGroup;
+    }
 }

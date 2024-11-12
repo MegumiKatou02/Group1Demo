@@ -4,11 +4,6 @@ pipeline {
         maven 'MAVEN' 
         dockerTool 'Docker'
     }
-    environment {
-        DOCKER_HUB_CREDENTIALS = 'docker-hub'  
-        IMAGE_NAME = 'chinh'  
-        TAG = 'latest'  
-    }
     stages {
         stage('Checkout') {
             steps {
@@ -33,15 +28,11 @@ pipeline {
 
     } 
     post {
-            // Bước này sẽ thực hiện sau khi các stage hoàn thành
-            always {
-                echo 'This will always run after the pipeline completes.'  // Thực hiện dù pipeline thành công hay thất bại
-            }
             success {
-                echo 'Build completed successfully!'  // Thực hiện khi pipeline thành công
+                echo 'Thuc hien pineline thanh cong'  
             }
             failure {
-                echo 'Build failed. Check the logs for errors.'  // Thực hiện khi pipeline thất bại
+                echo 'Build that bai.' 
             }
         }
 }
