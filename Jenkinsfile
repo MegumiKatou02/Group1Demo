@@ -49,6 +49,18 @@ pipeline {
                 }
             }
         }
+        post {
+            // Bước này sẽ thực hiện sau khi các stage hoàn thành
+            always {
+                echo 'This will always run after the pipeline completes.'  // Thực hiện dù pipeline thành công hay thất bại
+            }
+            success {
+                echo 'Build completed successfully!'  // Thực hiện khi pipeline thành công
+            }
+            failure {
+                echo 'Build failed. Check the logs for errors.'  // Thực hiện khi pipeline thất bại
+            }
+        }
 
     } 
 }
