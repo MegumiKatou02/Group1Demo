@@ -35,7 +35,7 @@ public class Program extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel l1 = new JLabel("Lê Đình Chinh");
+		JLabel l1 = new JLabel("Lê Đình sChinh");
 		l1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		l1.setBounds(108, 83, 242, 28);
 		contentPane.add(l1);
