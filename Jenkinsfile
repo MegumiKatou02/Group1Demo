@@ -16,11 +16,10 @@ pipeline {
                 }
             }
         }
-        stage('Login to Docker Hub') {
+        stage('Build Docker Image') {
             steps {
-                withDockerRegistry(credentialsId: 'docker.hub', url: 'https://index.docker.io/v1/') {
-                    sh label: '', script: 'docker build -t chinh:latest .'
-                    sh label: '', script: 'docker push chinh:latest'
+                script {
+                    sh 'docker build -t chinh .'
                 }
             }
         }
