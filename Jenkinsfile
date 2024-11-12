@@ -28,7 +28,7 @@ pipeline {
                 script {
                     withDockerRegistry(credentialsId: 'docker-hub', toolName: 'Docker') {
                         sh "docker build -t ${DOCKER_HUB_CREDENTIALS}/${IMAGE_NAME}:${TAG} ."
-                    }
+                    } 
                 }
             }
         }
