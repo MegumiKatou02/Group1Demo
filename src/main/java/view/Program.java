@@ -7,12 +7,16 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.util.ArrayList;
 
 public class Program extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JLabel l1, l2, l3, l4, nameGroup;
+	
+	Generation gen = new Generation();
+	private ArrayList<Member> members = gen.getMembers();
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -36,22 +40,22 @@ public class Program extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		l1 = new JLabel("Lê Đình Chinh");
+		l1 = new JLabel(members.get(0).getName());
 		l1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		l1.setBounds(108, 83, 242, 28);
 		contentPane.add(l1);
 		
-		l2 = new JLabel("Lê Công Huy");
+		l2 = new JLabel(members.get(1).getName());
 		l2.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		l2.setBounds(108, 121, 242, 28);
 		contentPane.add(l2);
 		
-		l3 = new JLabel("Nguyễn Duy Vũ");
+		l3 = new JLabel(members.get(2).getName());
 		l3.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		l3.setBounds(108, 159, 242, 28);
 		contentPane.add(l3);
 		
-		l4 = new JLabel("Nguyễn Nhật Linh");
+		l4 = new JLabel(members.get(3).getName());
 		l4.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		l4.setBounds(108, 197, 242, 28); 
 		contentPane.add(l4);
