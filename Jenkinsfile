@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'mvn clean install -Djava.awt.headless=true -X'
+                    sh 'mvn clean install -Djava.awt.headless=true'
                 }
             }
         }
