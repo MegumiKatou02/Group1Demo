@@ -49,7 +49,10 @@ pipeline {
                 }
             }
         }
-        post {
+        
+
+    } 
+    post {
             // Bước này sẽ thực hiện sau khi các stage hoàn thành
             always {
                 echo 'This will always run after the pipeline completes.'  // Thực hiện dù pipeline thành công hay thất bại
@@ -61,6 +64,4 @@ pipeline {
                 echo 'Build failed. Check the logs for errors.'  // Thực hiện khi pipeline thất bại
             }
         }
-
-    } 
 }
