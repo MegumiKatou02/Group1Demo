@@ -24,6 +24,18 @@
                     <argLine>-Djava.awt.headless=true</argLine> <!-- Chạy trong chế độ headless -->
                 </configuration>
             </plugin>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.4.1</version>
+            <configuration>
+                <archive>
+                    <manifestEntries>
+                        <Main-Class>view.Program</Main-Class> <!-- Thêm lớp chính của bạn ở đây -->
+                    </manifestEntries>
+                </archive>
+            </configuration>
+        </plugin>
         </plugins>
     </build>
 </project>

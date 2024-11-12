@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ProgramTest" time="0.043" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ProgramTest" time="0.045" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\LINH-PC\AppData\Local\Temp\surefire8102815360592508431\surefirebooter9301266515077493522.jar C:\Users\LINH-PC\AppData\Local\Temp\surefire8102815360592508431 2024-11-12T22-38-41_402-jvmRun1 surefire715814220814223239tmp surefire_08312499884139967628tmp"/>
+    <property name="sun.java.command" value="C:\Users\LINH-PC\AppData\Local\Temp\surefire4957137901661112307\surefirebooter10242714085320265702.jar C:\Users\LINH-PC\AppData\Local\Temp\surefire4957137901661112307 2024-11-12T22-49-51_928-jvmRun1 surefire9358580754668865737tmp surefire_012262920842840491660tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\LINH-PC\eclipse-workspace\AppSwing\target\test-classes;C:\Users\LINH-PC\eclipse-workspace\AppSwing\target\classes;C:\Users\LINH-PC\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\LINH-PC\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\LINH-PC\AppData\Local\Temp\surefire8102815360592508431\surefirebooter9301266515077493522.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\LINH-PC\AppData\Local\Temp\surefire4957137901661112307\surefirebooter10242714085320265702.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.5+9-LTS-239"/>
@@ -59,9 +59,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testLabels" classname="ProgramTest" time="0.011">
-    <failure message="expected:&lt;Nguyễn Nhật Lin[d]h&gt; but was:&lt;Nguyễn Nhật Lin[]h&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<Nguyễn Nhật Lin[d]h> but was:<Nguyễn Nhật Lin[]h>
-	at ProgramTest.testLabels(ProgramTest.java:19)
-]]></failure>
-  </testcase>
+  <testcase name="testLabels" classname="ProgramTest" time="0.004"/>
 </testsuite>
