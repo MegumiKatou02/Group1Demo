@@ -34,10 +34,10 @@ pipeline {
                     // Đảm bảo Jenkins đã login vào Docker Hub với credentialsId 'docker.hub'
                     withDockerRegistry(credentialsId: 'docker.hub', toolName: 'Docker') {
                         // // Xây dựng Docker image từ Dockerfile trong thư mục hiện tại
-                        // sh 'docker build -t chinhapp .'
+                        sh 'docker build -t chinhapp .'
                         
                         // // Đẩy Docker image lên Docker Hub (hoặc registry khác)
-                        // sh 'docker push chinhapp'
+                        sh 'docker push chinhapp'
                     }
                 }
             }
