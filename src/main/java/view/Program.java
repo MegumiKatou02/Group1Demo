@@ -60,7 +60,7 @@ public class Program extends JFrame {
 		l4.setBounds(108, 197, 242, 28); 
 		contentPane.add(l4);
 		
-		nameGroup = new JLabel("Group 1");
+		nameGroup = new JLabel("Group 2");
 		nameGroup.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		nameGroup.setBounds(108, 23, 242, 28);
 		contentPane.add(nameGroup);
