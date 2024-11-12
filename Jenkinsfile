@@ -24,7 +24,6 @@ pipeline {
                 }
             }
         }
-        }
         stage('Archive') {
             steps {
                 echo 'Archiving JAR file...'
@@ -33,11 +32,11 @@ pipeline {
         }
     } 
     post {
-            success {
-                echo 'Thuc hien pineline thanh cong'  
-            }
-            failure {
-                echo 'Build that bai.' 
-            }
+        success {
+            echo 'Thuc hien pineline thanh cong'  
         }
+        failure {
+            echo 'Build that bai.' 
+        }
+    }
 }
