@@ -38,6 +38,14 @@ pipeline {
                 archiveArtifacts allowEmptyArchive: true, artifacts: '**/target/*.jar', onlyIfSuccessful: true
             }
         }
+        stage('Run') {
+            steps {
+                script {
+                    echo 'Running the application...'
+                    sh 'java -jar target/AppSwing-0.0.1-SNAPSHOT.jar'
+                }
+            }
+        }
     } 
     post {
             success {
