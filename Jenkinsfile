@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'MAVEN' 
-        // dockerTool 'Docker'
+        dockerTool 'Docker'
     }
     environment {
         DOCKER_HUB_CREDENTIALS = 'docker-hub'  
@@ -23,15 +23,15 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
-                        sh 'docker --version'
-                        sh "docker build -t ${DOCKER_HUB_CREDENTIALS}/${IMAGE_NAME}:${TAG} ."
-                    } 
-                }
-            }
-        }
+        // stage('Build Docker Image') {
+        //     steps {
+        //         script {
+        //             withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
+        //                 sh 'docker --version'
+        //                 sh "docker build -t ${DOCKER_HUB_CREDENTIALS}/${IMAGE_NAME}:${TAG} ."
+        //             } 
+        //         }
+        //     }
+        // }
     } 
 }
