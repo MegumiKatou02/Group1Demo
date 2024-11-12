@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
                     // Đảm bảo Jenkins đã login vào Docker Hub với credentialsId 'docker.hub'
-                    withDockerRegistry(credentialsId: 'docker.hub', toolName: 'Docker') {
+                    withDockerRegistry(credentialsId: 'docker-hub', toolName: 'Docker') {
                         // // Xây dựng Docker image từ Dockerfile trong thư mục hiện tại
                         sh 'docker build -t chinhapp .'
                         
