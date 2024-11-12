@@ -32,13 +32,12 @@ pipeline {
             }
         }
         stage('Archive') {
+            steps {
                 // Lưu trữ file JAR để có thể tải về hoặc sử dụng sau này
                 echo 'Archiving JAR file...'
                 archiveArtifacts allowEmptyArchive: true, artifacts: '**/target/*.jar', onlyIfSuccessful: true
             }
         }
-        
-
     } 
     post {
             success {
