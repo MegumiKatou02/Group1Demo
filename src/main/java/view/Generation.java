@@ -11,7 +11,7 @@ public class Generation {
         members.add(new Member("Lê Công Huy"));
         members.add(new Member("Nguyễn Duy Vũ"));
         members.add(new Member("Nguyễn Nhật Linh"));
-        nameGroup = "Group 1";
+        nameGroup = "Group 2";
     }
 
     public ArrayList<Member> getMembers() {
