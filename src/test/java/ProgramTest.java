@@ -11,7 +11,7 @@ public class ProgramTest {
 
     @Before
     public void setUp() {
-        program = new Program();
+        // program = new Program();
     }
 
     @Test
