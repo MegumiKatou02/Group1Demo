@@ -16,6 +16,6 @@ public class ProgramTest {
         assertEquals("Lê Đình Chinh", members.get(0).getName());
         assertEquals("Lê Công Huy", members.get(1).getName());
         assertEquals("Nguyễn Duy Vũ", members.get(2).getName());
-        assertEquals("Nguyễn Nhậtd Linh", members.get(3).getName());
+        assertEquals("Nguyễn Nhật Linh", members.get(3).getName());
     }
 }

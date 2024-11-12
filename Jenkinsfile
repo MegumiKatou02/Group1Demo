@@ -13,7 +13,14 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'mvn clean install -Djava.awt.headless=true'
+                    sh 'mvn clean install'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
+                    sh "mvn test"
                 }
             }
         }
