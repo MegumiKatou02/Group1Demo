@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ProgramTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.052 s <<< FAILURE! - in ProgramTest
-testLabels(ProgramTest)  Time elapsed: 0.011 s  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<Nguyễn []Nhật Linh> but was:<Nguyễn [d]Nhật Linh>
-	at ProgramTest.testLabels(ProgramTest.java:19)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s - in ProgramTest
