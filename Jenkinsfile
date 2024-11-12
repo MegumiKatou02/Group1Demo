@@ -23,24 +23,32 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+        // stage('Build Docker Image') {
+        //     steps {
+        //         script {
+        //             withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
+        //                 sh 'docker --version'
+        //                 sh "docker build -t ${DOCKER_HUB_CREDENTIALS}/${IMAGE_NAME}:${TAG} ."
+        //             } 
+        //         }
+        //     }
+        // }
+        // stage('Push Docker Image') {
+        //     steps {
+        //         script {
+        //             withDockerRegistry(credentialsId: DOCKER_HUB_CREDENTIALS, url: 'https://index.docker.io/v1/') {
+        //                 sh "docker push ${DOCKER_HUB_CREDENTIALS}/${IMAGE_NAME}:${TAG}"
+        //             }
+        //         }
+        //     }
+        // }
+        stage('Package') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
-                        sh 'docker --version'
-                        sh "docker build -t ${DOCKER_HUB_CREDENTIALS}/${IMAGE_NAME}:${TAG} ."
-                    } 
+                    sh 'mvn package'
                 }
             }
         }
-        stage('Push Docker Image') {
-            steps {
-                script {
-                    withDockerRegistry(credentialsId: DOCKER_HUB_CREDENTIALS, url: 'https://index.docker.io/v1/') {
-                        sh "docker push ${DOCKER_HUB_CREDENTIALS}/${IMAGE_NAME}:${TAG}"
-                    }
-                }
-            }
-        }
+
     } 
 }
