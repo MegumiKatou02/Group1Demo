@@ -16,5 +16,13 @@ pipeline {
                 }
             }
         }
+        stage('Login to Docker Hub') {
+            steps {
+                withDockerRegistry(credentialsId: 'docker.hub', url: 'https://index.docker.io/v1/') {
+                    sh 'docker build -t chinh:latest .'
+                    sh 'docker push chinh:latest'
+                }
+            }
+        }
     } 
 }
