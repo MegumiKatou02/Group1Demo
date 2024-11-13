@@ -25,7 +25,6 @@ pipeline {
         }
         stage('Archive') {
             steps {
-                echo 'Archiving JAR file...'
                 archiveArtifacts allowEmptyArchive: false, artifacts: '**/target/*.jar', onlyIfSuccessful: true
             }
         }
