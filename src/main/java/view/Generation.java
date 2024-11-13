@@ -7,7 +7,7 @@ public class Generation {
     private String nameGroup;
 
     public Generation() {
-        members.add(new Member("Lê Đình Chinh"));
+        members.add(new Member("Lê dfdfdĐình Chinh"));
         members.add(new Member("Lê Công Huy"));
         members.add(new Member("Nguyễn Duy Vũ"));
         members.add(new Member("Nguyễn Nhật Linh"));
